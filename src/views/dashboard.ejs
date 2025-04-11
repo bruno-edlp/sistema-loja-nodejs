@@ -1,0 +1,91 @@
+<%- include('partials/header') %>
+
+<h2 class="mb-4 text-center">Painel Administrativo</h2>
+
+<div class="row g-4 text-white">
+    <div class="col-md-3">
+      <div class="card bg-primary shadow-sm">
+        <div class="card-body">
+          <h6 class="card-title">Vendas Hoje</h6>
+          <p class="fs-4">38</p>
+          <i class="bi bi-bag-fill fs-3"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-success shadow-sm">
+        <div class="card-body">
+          <h6 class="card-title">Faturamento</h6>
+          <p class="fs-4">R$ 4.520,00</p>
+          <i class="bi bi-cash-coin fs-3"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-warning shadow-sm">
+        <div class="card-body">
+          <h6 class="card-title">Estoque</h6>
+          <p class="fs-4">152</p>
+          <i class="bi bi-box-seam fs-3"></i>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card bg-dark shadow-sm text-white">
+        <div class="card-body">
+          <h6 class="card-title">Clientes</h6>
+          <p class="fs-4">27</p>
+          <i class="bi bi-people-fill fs-3"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<hr class="my-5">
+
+<div class="row">
+  <div class="col-md-6">
+    <h5 class="text-center">Vendas da Semana</h5>
+    <canvas id="vendasSemanaChart"></canvas>
+  </div>
+  <div class="col-md-6">
+    <h5 class="text-center">Categorias Mais Vendidas</h5>
+    <canvas id="categoriasChart"></canvas>
+  </div>
+</div>
+
+<script>
+  const ctx1 = document.getElementById('vendasSemanaChart').getContext('2d');
+  new Chart(ctx1, {
+    type: 'bar',
+    data: {
+      labels: ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+      datasets: [{
+        label: 'Vendas',
+        data: [5, 12, 8, 14, 10, 18, 9],
+        backgroundColor: 'rgba(13, 110, 253, 0.7)',
+        borderRadius: 6
+      }]
+    },
+    options: {
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  });
+
+  const ctx2 = document.getElementById('categoriasChart').getContext('2d');
+  new Chart(ctx2, {
+    type: 'pie',
+    data: {
+      labels: ['Eletrônicos', 'Roupas', 'Livros', 'Acessórios'],
+      datasets: [{
+        data: [35, 25, 20, 20],
+        backgroundColor: ['#0d6efd', '#198754', '#ffc107', '#dc3545']
+      }]
+    }
+  });
+</script>
+
+<%- include('partials/footer') %>
