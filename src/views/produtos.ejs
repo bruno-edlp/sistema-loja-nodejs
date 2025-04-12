@@ -9,6 +9,8 @@
         <img src="<%= produto.imagem %>" class="card-img-top" alt="<%= produto.nome %>">
         <div class="card-body">
           <h5 class="card-title"><%= produto.nome %></h5>
+          <br>
+          <h6 class="card-title">Categoria:<%= produto.categoria %></h6>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">Estoque: <%= produto.estoque %></li>
             <li class="list-group-item">Vendas Hoje: <%= produto.vendasHoje %></li>

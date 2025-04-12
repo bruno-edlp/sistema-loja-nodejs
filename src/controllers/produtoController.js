@@ -12,7 +12,8 @@
         estoque: 25,
         vendasHoje: 8,
         custoCompra: 120,
-        precoVenda: 199.9
+        precoVenda: 199.9,
+        categoria: 'Calçados'
       },
       {
         nome: "Camiseta Dry Fit",
@@ -21,7 +22,8 @@
         estoque: 50,
         vendasHoje: 12,
         custoCompra: 40,
-        precoVenda: 89.9
+        precoVenda: 89.9,
+        categoria: 'Roupas'
       },
       {
         nome: "Mochila Esportiva",
@@ -30,7 +32,8 @@
         estoque: 18,
         vendasHoje: 4,
         custoCompra: 90,
-        precoVenda: 149.9
+        precoVenda: 149.9,
+        categoria: 'Mochilas'
       },
       {
         nome: "Short Esportivo",
@@ -39,7 +42,8 @@
         estoque: 30,
         vendasHoje: 13,
         custoCompra: 84.80,
-        precoVenda: 159.90
+        precoVenda: 159.90,
+        categoria: 'Roupas'
       },
       {
         nome: "Oculos de Sol Unisexx Esportivo",
@@ -48,7 +52,8 @@
         estoque: 9,
         vendasHoje: 1,
         custoCompra: 70.60,
-        precoVenda: 164.90
+        precoVenda: 164.90,
+        categoria: 'Acessorios'
       },
       {
         nome: "Par Meia esportiva",
@@ -57,7 +62,8 @@
         estoque: 58,
         vendasHoje: 31,
         custoCompra: 27.50,
-        precoVenda: 39.90
+        precoVenda: 39.90,
+        categoria: 'Roupas'
       }
     ];
   
